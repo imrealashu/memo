@@ -21,6 +21,9 @@ public class MainActivity extends ActionBarActivity {
     	Intent intent = new Intent(this, addMemoActivity.class);
     	startActivity(intent);
     }
+    public void exitApp(View view){
+    	finish();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

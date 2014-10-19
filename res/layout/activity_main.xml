@@ -8,14 +8,34 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.ashish.example.memo.MainActivity" >
 
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" >
+
+    </RelativeLayout>
+
     <Button
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="45dp"
-        android:text="Add Memo"
-        android:onClick="addNewMemo" />
+        android:layout_toLeftOf="@+id/Button01"
+        android:onClick="addNewMemo"
+        android:text="Add Memo" />
+
+    <Button
+        android:id="@+id/Button01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/relativeLayout1"
+        android:layout_below="@+id/relativeLayout1"
+        android:text="Cancel"
+        android:onClick="exitApp" />
 
 </RelativeLayout>
